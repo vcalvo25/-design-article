@@ -8,17 +8,41 @@
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <script src="https://kit.fontawesome.com/581ac4e7a1.js" crossorigin="anonymous"></script>
         <title>Home Design Article</title>
     </head>
 
     <body>
       <div class="container">
-        <h2>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
-        <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've 
-            got some simple tips to help you make any room feel complete.
-        </p>
-        <h3>Michelle Appleton</h3>
-        <p id="date">28 Jun 2020</p>
+        <img id="drawers" src="/images/drawers.jpg">
+        <div class="article">
+            <h2>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
+            <p id="description">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've 
+                got some simple tips to help you make any room feel complete.
+            </p>
+            <!--Profile Info-->
+            <img id="profile-avatar" src="/images/avatar-michelle.jpg">
+            <div class="profile-info">
+                <h3>Michelle Appleton</h3>
+                <p id="date">28 Jun 2020</p>
+                
+            </div>  
+            <div class="share">
+                <button onclick="togglePopup()"><i id="share" class="fa-solid fa-share fa-lg"></i></button>
+            </div> 
+            <div id="popup" class="popup"> 
+            <!--Social Icons-->
+                
+                <ul class="icons">
+                    <p id="sharetext">SHARE</p>
+                    <a href="#"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest fa-xl"></i></a>
+                </ul>
+        </div>
       </div>  
+    </div>
+    <script src="./script.js"></script>
     </body>
 </html>
