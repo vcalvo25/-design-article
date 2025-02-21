@@ -1,82 +1,90 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
 body {
-  font-family: "Manrope", serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-  color: hsl(217, 19%, 35%);
-  background-color: hsl(210, 46%, 95%);
-  
+    font-size: 13px;
+    font-family: "Manrope"; 
+    background-color: hsl(210, 46%, 95%);
 }
 
 .container {
-    margin: 200px 600px;
     background-color: white;
-    border-radius: 15px;
     display: flex;
-    box-shadow: 0px 5px 20px hsl(214, 17%, 51%);  
+    margin: 200px auto;
+    height: 28%;
+    width: 735px;
+    gap: 35px;
+    border-radius: 10px;
 }
 
-.article {
-    padding: 35px 30px 25px 40px;
-    font-size: 13px;
-}
-
-#drawers {
-    width: 40%;
+.img-container {
+    width: 90%;
     height: auto;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    float: left;
-    object-position: .01em;
+}
+
+.drawer-img {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     object-fit: cover;
-    display: block;
+    object-position: left;
 }
 
-#description {
+.card-details {
+  margin: 28px 0px 0px 0px;
+}
+
+h2 {
+    color: hsl(217, 19%, 35%);
+    padding: 0px 80px 0px 0px;
+}
+
+.sub-paragraph {
+    color: hsl(214, 17%, 51%);
+    margin: 15px 58px 0px 0px;
     line-height: 20px;
-    color:hsla(217, 19%, 35%, .8);
-    font-weight: 500;
 }
 
-.profile-info {
-    padding-top: 19px;
-    padding-left: 40px;  
-    font-size: 0.7rem;  
-    line-height: 18px;  
-}
-
-#profile-avatar {
-    width: 10%;
+.avatar-container {
+    width: 8%;
     height: auto;
     display: flex;
     float: left;
     border-radius: 50px;
-    margin-top: 17px;
+    margin-top: 19px;
     margin-right: 15px;
 }
 
-h2 {
-    padding-bottom: 10px;
+.profile-info {
+  font-size: .6rem;
+  margin-top: 20px;
 }
+
+h3 {
+    color: hsl(217, 19%, 35%)
+}
+
+#date {
+    color: hsl(214, 17%, 51%);
+    padding-top: 5px;
+}
+
 
 button {
     border-style: none;
     color: hsl(217, 19%, 35%);
     background-color: hsl(212, 23%, 69%);
     border-radius: 10px;
+    margin-top: -10px;
 }
 
 .share {
-    padding: 0px;
     float: right;
-    margin-top: -20px;
-    padding-right: 20px;
+    padding-right: 60px;
 }
 
 .fa-share:hover {
@@ -86,10 +94,10 @@ button {
 .popup {
     display: none;
     position: fixed;
-    transform: translate(75%, -210%);
+    transform: translate(92%, -180%);
     max-width: 100%;
     height: auto;
-    padding: 15px;
+    padding: 14px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     background-color: hsl(217, 19%, 35%);
     border-radius: 10px;
@@ -115,129 +123,151 @@ button {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 2px 0px 0px 40px;
+    padding: 3px 15px;
     margin: auto;
-
 }
 
-#sharetext {
-    letter-spacing: 5px;
-    color: hsl(210, 46%, 95%);
-    font-size: 12px;
-    margin-left: -25px;
+li {
+    list-style: none ;
+    display: flex;
 }
 
 .fa-brands {
     color: white;
-    letter-spacing: 20px;
+    letter-spacing: 5px;
     padding-left: 15px;
+    align-items: center;
 }
 
-@media only screen and (max-width: 430px) {
-   
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 31px;
+#sharetext {
+    letter-spacing: 8px;
+    color: hsla(210, 46%, 95%, 50%);
+    font-size: 11px;
+}
+
+@media screen and (max-width: 550px){
+    .container {
+        flex-direction: column;
+        margin: 50px 25px;
+        height: auto;
+        width: auto;
+        gap: 0px;
     }
 
+    .img-container {
+        width: 100%;
+        height: 215px; 
+        overflow: hidden;  
+    }
+
+    .drawer-img {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top
+    }
+
+    .card-details {
+       margin: 30px 35px 22px 28px;
+    }
+      
+      h2 {
+          padding: 0px;
+          font-size: 1rem;
+      }
+      
+      .sub-paragraph {
+          margin: 12px 0px 0px 0px;
+          font-size: .7rem;
+          text-align: left;
+      }
+
+      .avatar-container {
+        width: 12%;
+        margin-top: 26px;
+      }
+
+      .profile-info {
+        margin-top: 26px;
+      }
+
+      .share {
+        padding-right: 10px;
+      }
+
+      .popup {
+        display: block;
+        transform: translate(50%, -60%);
+        left: 0%;
+        position: fixed;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        margin: auto;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+      }
+
+      .popup p::after {
+        content: none;
+      }
+
+      #sharetext {
+        letter-spacing: 5px;
+      }
+
+      .icons{
+        padding: 0px;
+        padding: 10px 15px;
+        justify-content: normal ;
+        
+      }
+}
+
+@media screen and (min-width: 600px) and(max-width: 1300) {
 
     .container {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
+        height: auto;
+        margin: 200px auto;
+        max-width: 90%;
+        padding: 0px;
     }
-   
-    #drawers {
-        display: block;
-        margin: -10px 0px;
+    .img-container {
+        width: 10%;
+        height: 100%;
+    }
+
+    .drawer-img {
+        height: 100%;
         width: 100%;
-        height: 15em;
-        border-top-right-radius: 15px;
-        border-bottom-left-radius: 0px;
-        object-fit: cover;
-        object-position: 0em 0.2em ;  
-    }
-   
-    .article {
-        padding-top: 40px;
-        margin-left: -5px;
     }
 
-
-    h2 {
-        font-size: 1.3em;
-        margin-right: 0px;
-        padding-left: 0px;
-    }
-   
-    #description {
-        padding: 5px 9px 0px 0px;
-        text-align: left;
-        font-weight: 500;
-        font-size: 1.0em;
-    }
-
-
-    .profile-info {
-        padding-top: 20px;  
-        font-size: 0.76rem;
-        padding-left: 62px;
-        line-height: 22px;
-    }
-
-
-    #profile-avatar {
-        width: 14%;
-        margin-top: 20px;
-        margin-right: 10px;
-    }
-   
     .share {
-        position: absolute;
         float: right;
-        padding: 6px 12px;
-        margin-left: 210px;
-        z-index: 1
+        padding-right: 120px;  
     }
+
+    .card-details {
+        margin-top: 0px;
+    }
+
+    .card-details {
+        margin: 28px 0px 0px 0px;
+    }
+
 
 
     .popup {
-        transform: translate(-11.1%, -65%);
-        width: 24.1em;
-        height: 71px;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        padding-left: 60px;
-    }
+        transform: translate(90%, -190%);
+      }
 
-
-    .popup p::after {
-        border-style: none;
-    }
-
-
-    .fa-share:hover {
-        color: white;
-    }
-   
-    .icons {
+      .icons {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
-        padding: 8px 100px 0px 0px;
+        padding: 3px 5px;
+        margin: auto;
+      }
     }
-
-
-    .fa-brands {
-        letter-spacing: 0px;
-    }
-
-
-    #sharetext {
-        letter-spacing: 8px;
-        font-size: 13px
-    }  
-}
-
