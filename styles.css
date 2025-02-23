@@ -14,14 +14,14 @@ body {
     background-color: white;
     display: flex;
     margin: 200px auto;
-    height: 28%;
-    width: 735px;
+    height: 29%;
+    max-width: 737px;
     gap: 35px;
     border-radius: 10px;
 }
 
 .img-container {
-    width: 90%;
+    width: 80%;
     height: auto;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .card-details {
-  margin: 28px 0px 0px 0px;
+  margin: 28px 0px 28px 0px;
 }
 
 h2 {
@@ -94,7 +94,7 @@ button {
 .popup {
     display: none;
     position: fixed;
-    transform: translate(92%, -180%);
+    transform: translate(104%, -180%);
     max-width: 100%;
     height: auto;
     padding: 14px;
@@ -148,7 +148,7 @@ li {
 @media screen and (max-width: 550px){
     .container {
         flex-direction: column;
-        margin: 50px 25px;
+        margin: auto 25px;
         height: auto;
         width: auto;
         gap: 0px;
@@ -193,21 +193,29 @@ li {
         margin-top: 26px;
       }
 
+      button {
+        z-index: 1;
+        position: fixed;
+    }
+
       .share {
         padding-right: 10px;
+        padding-top: 0.5em;
       }
 
       .popup {
-        display: block;
-        transform: translate(50%, -60%);
-        left: 0%;
         position: fixed;
-        width: auto;
+        transform: translate(0%, -55%);
+        max-width: 100%;
         height: auto;
-        padding: 10px;
-        margin: auto;
+        left: 0px;
+        width: 87.9%;
+        padding: 12px;
+        margin: 0px 25px;
         border-top-right-radius: 0px;
         border-top-left-radius: 0px;
+   
+        z-index: 0;
       }
 
       .popup p::after {
@@ -226,22 +234,34 @@ li {
       }
 }
 
-@media screen and (min-width: 600px) and(max-width: 1300) {
+@media screen and (min-width: 600px) and(max-width: 849px) {
 
     .container {
-        height: auto;
+        background-color: white;
+        display: flex;
         margin: 200px auto;
-        max-width: 90%;
-        padding: 0px;
+        height: auto;
+        max-width: 25rem;
+        gap: 35px;
+        border-radius: 10px;
     }
+    
     .img-container {
-        width: 10%;
-        height: 100%;
+        width: 80%;
+        height: auto;
     }
-
+    
     .drawer-img {
         height: 100%;
         width: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        object-fit: cover;
+        object-position: left;
+    }
+    
+    .card-details {
+      margin: 28px 0px 28px 0px;
     }
 
     .share {
@@ -257,8 +277,6 @@ li {
         margin: 28px 0px 0px 0px;
     }
 
-
-
     .popup {
         transform: translate(90%, -190%);
       }
@@ -271,3 +289,41 @@ li {
         margin: auto;
       }
     }
+
+@media screen and (min-width: 850px) and (max-width: 999px) {
+    .container {
+        height: auto;
+        max-width: 80%;
+    }
+    
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1440px) {
+    .container {
+        background-color: white;
+        display: flex;
+        margin: 200px auto;
+        height: auto;
+        max-width: 50rem;
+        gap: 35px;
+        border-radius: 10px;
+    }
+    
+    .img-container {
+        width: 80%;
+        height: auto;
+    }
+    
+    .drawer-img {
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        object-fit: cover;
+        object-position: left;
+    }
+    
+    .popup {
+        transform: translate(125%, -180%);
+    }
+}
